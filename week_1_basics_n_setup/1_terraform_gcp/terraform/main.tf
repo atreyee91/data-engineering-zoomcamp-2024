@@ -9,13 +9,13 @@ terraform {
 
 provider "google" {
   # Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
-  #credentials = 
-  project = "dezoomcamp-411909"
+  # credentials = 
+  project = <project_id>
   region  = "us-central1"
 }
 
 resource "google_storage_bucket" "demo-bucket" {
-  name     = "dezoomcamp-411909-terra-bucket"
+  name     = <bucket_name>
   location = "US"
 
   # Optional, but recommended settings:
@@ -39,7 +39,7 @@ resource "google_storage_bucket" "demo-bucket" {
 }
 
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id = "dezoomcamp_411909_terra_dataset"
-  project    = "dezoomcamp-411909"
+  dataset_id = <dataset_id>
+  project    = <project_id>
   location   = "US"
 }
