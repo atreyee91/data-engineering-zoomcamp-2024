@@ -1,6 +1,6 @@
 variable "credentials"{
     description = "My Credentials"
-    default = <Ket_Path>
+    default = <Key_Path>
 } 
 
 variable "region"{
