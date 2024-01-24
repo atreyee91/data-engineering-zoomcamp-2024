@@ -1,1 +1,0 @@
-select * from ny_taxi.yellow_taxi_data limit 100;
