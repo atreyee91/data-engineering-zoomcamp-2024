@@ -9,17 +9,17 @@ terraform {
 
 provider "google" {
   # Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
-  # credentials = 
-  project = <project_id>
-  region  = "us-central1"
+  credentials = file(var.credentials)
+  project     = var.project
+  region      = var.region
 }
 
 resource "google_storage_bucket" "demo-bucket" {
-  name     = <bucket_name>
-  location = "US"
+  name     = var.gcs_bucket_name
+  location = var.location
 
   # Optional, but recommended settings:
-  storage_class               = "STANDARD"
+  storage_class               = var.gcs_storage_class
   uniform_bucket_level_access = true
 
   versioning {
@@ -39,7 +39,6 @@ resource "google_storage_bucket" "demo-bucket" {
 }
 
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id = <dataset_id>
-  project    = <project_id>
-  location   = "US"
+  dataset_id = var.bq_dataset_name
+  location   = var.location
 }
