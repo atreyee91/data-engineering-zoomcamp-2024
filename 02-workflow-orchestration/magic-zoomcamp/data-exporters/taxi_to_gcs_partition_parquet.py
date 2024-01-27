@@ -7,9 +7,9 @@ if 'data_exporter' not in globals():
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = <credential_path>
 
-bucket_name = 'mage-zoomcamp-1991'
+bucket_name = <bucket_name>
 #object_key = 'nyc_taxi_data.parquet'
-project_id = 'dezoomcamp-411909'
+project_id = <project_id>
 
 table_name = "nyc_taxi_data"
 
