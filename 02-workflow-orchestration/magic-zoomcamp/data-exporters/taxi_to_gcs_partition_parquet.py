@@ -5,7 +5,7 @@ import os
 if 'data_exporter' not in globals():
     from mage_ai.data_preparation.decorators import data_exporter
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/mage-gcp.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = <credential_path>
 
 bucket_name = 'mage-zoomcamp-1991'
 #object_key = 'nyc_taxi_data.parquet'
