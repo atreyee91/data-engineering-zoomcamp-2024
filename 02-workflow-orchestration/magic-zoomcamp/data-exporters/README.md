@@ -1,1 +1,1 @@
-Load the data to Postgres
+Load the data to Postgres/GCP
