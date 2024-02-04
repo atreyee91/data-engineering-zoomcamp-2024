@@ -5,10 +5,10 @@ import os
 if 'data_exporter' not in globals():
     from mage_ai.data_preparation.decorators import data_exporter
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "/home/src/mage-gcp.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = <param_file>
 
 bucket_name = 'mage-zoomcamp-1991'
-#object_key = 'nyc_taxi_data.parquet'
+
 project_id = 'dezoomcamp-411909'
 
 table_name = "green_taxi"
