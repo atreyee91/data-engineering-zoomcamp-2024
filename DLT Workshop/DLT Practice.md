@@ -1,3 +1,5 @@
+# Install DLT
+
 ```python
 !pip install dlt[duckdb]
 ```
