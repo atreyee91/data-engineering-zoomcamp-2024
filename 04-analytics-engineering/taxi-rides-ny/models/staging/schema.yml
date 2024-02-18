@@ -16,6 +16,8 @@ sources:
           yellow_trip_data_dbt
           # freshness:
           # error_after: {count: 6, period: hour}
+      - name:
+          fhv_trip_data_dbt
 
 models:
   - name: stg_green_tripdata
@@ -209,5 +211,36 @@ models:
         description: ""
 
       - name: payment_type_description
+        data_type: string
+        description: ""
+
+  - name: stg_fhv_tripdata
+    description: ""
+    columns:
+      - name: dispatching_base_num
+        data_type: string
+        description: ""
+
+      - name: pickup_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: dropoff_datetime
+        data_type: timestamp
+        description: ""
+
+      - name: pulocationid
+        data_type: int64
+        description: ""
+
+      - name: dolocationid
+        data_type: int64
+        description: ""
+
+      - name: sr_flag
+        data_type: string
+        description: ""
+
+      - name: affiliated_base_number
         data_type: string
         description: ""
